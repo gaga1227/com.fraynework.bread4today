@@ -7,10 +7,6 @@
 html, button, input, select, textarea { color:#222; font-family:sans-serif; }
 body { font-size:1em; line-height:1.4; }
 
-/* text selection style */
-::-moz-selection { color:#fff; background:#222; text-shadow:none; }
-::selection { color:#fff; background:#222; text-shadow:none; }
-
 /* simplified hr style */
 hr { display:block; height:1px; margin:1em 0; padding:0; border:0; border-top:1px solid #ccc; }
 
@@ -30,42 +26,10 @@ textarea { resize:vertical; }
 /* Default table cell vertical alignment */
 th, td { vertical-align:top; }
 
-/* Link styles*/
-/*
-a           { color: #666; }
-a:visited   { color: #666; }
-a:hover     { color: #000; }
-a:focus     { color: #000; }
-*/
-
-/* Link transitions */
-a {
-    /*
-	-webkit-transition-property:color,background-color,border-color;
-    -webkit-transition-duration:0.3s;
-    -webkit-transition-timing-function:ease-in-out;
-    -webkit-transition-delay:0s;
-
-    -moz-transition-property:color,background-color,border-color;
-    -moz-transition-duration:0.3s;
-    -moz-transition-timing-function:ease-in-out;
-    -moz-transition-delay:0s;
-
-    -o-transition-property:color,background-color,border-color;
-    -o-transition-duration:0.3s;
-    -o-transition-timing-function:ease-in-out;
-    -o-transition-delay:0s;
-
-    transition-property:color,background-color,border-color;
-    transition-duration:0.3s;
-    transition-timing-function:ease-in-out;
-    transition-delay:0s;
-	*/ }
-
 
 /* ==========================================================================
    Primary Styles
-   Author: JX 20130507
+   Author: JX 20130517
    ========================================================================== */
 
 
@@ -78,7 +42,7 @@ a {
 html,
 body {
 	position:relative; width:100%; height:100%; margin:0; padding:0; overflow:hidden;
-	font-family:'SourceSansPro',sans-serif; font-size:13px; font-weight:400; line-height:16px; }
+	font-family:'Montserrat',sans-serif; font-size:16px; font-weight:400; line-height:20px; }
 
 
 /* ==========================================================================
@@ -92,7 +56,7 @@ body {
 
 /* pageBg */
 .pageBg {
-	background:#ffc423 url(../img/brand-bg.png) center top no-repeat; background-size:cover; }
+	background:#ffc423 url(../img/brand-bg.jpg) center top no-repeat; background-size:cover; }
 
 /* page */
 .page {
@@ -103,31 +67,6 @@ body {
 	-o-transition:-o-transform 0.3s ease-in-out;
 	transition:transform 0.3s ease-in-out; }
 
-/* interaction */
-.page.currentPage {
-	z-index:10000; }
-
-/* interaction - menu */
-.page.currentPage.menuActive {
-	/*transform*/
-	-webkit-transform:translate(83%,0);
-	-moz-transform:translate(83%,0);
-	-ms-transform:translate(83%,0);
-	-o-transform:translate(83%,0);
-	transform:translate(83%,0); }
-#pgMenu {
-	width:84%;
-	/*transform*/
-	-webkit-transform:translate(0,0)!important;
-	-moz-transform:translate(0,0)!important;
-	-ms-transform:translate(0,0)!important;
-	-o-transform:translate(0,0)!important;
-	transform:translate(0,0)!important; }
-
-/*
-#pgMenu .pageShadow 				{ display:none; }
-body.menuActive #pgMenu .pageShadow { display:block; }
-*/
 
 /* ==========================================================================
    structure - PAGEHEADER
@@ -136,8 +75,15 @@ body.menuActive #pgMenu .pageShadow { display:block; }
 /* -------------------------------------------------------------------------- */
 /* container */
 .pageHeader {
-	position:absolute; top:0; left:0; width:100%; height:50px; margin:0; padding:0; overflow:hidden;
-	background:#ffc423; }
+	position:absolute; top:0; left:0; width:100%; height:60px; margin:0; padding:0; overflow:hidden;
+	/*transition*/
+	/*background-gradient*/
+	background-color:#287091;
+	background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.1)));
+	background-image:-webkit-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 100%);
+	background-image:-moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 100%);
+	background-image:-o-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 100%);
+	background-image:linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 100%); }
 
 	/* -------------------------------------------------------------------------- */
 	/* headerTitle */
@@ -314,186 +260,25 @@ body.menuActive #pgMenu .pageShadow { display:block; }
    common - BRAND
    ========================================================================== */
 
-/* title/logo/crest */
-.brandTitle {
-	display:block; width:270px; height:75px; margin:0 auto; padding:0; overflow:hidden;
-	background:url(../img/brand-title.png) center center no-repeat; background-size:contain; }
+/* brand common */
+.brand { 
+	display:block; margin:0 auto; padding:0; overflow:hidden;
+	background-position:center center; background-repeat:no-repeat; background-size:contain; }
 
-/* collage/artwork */
-.brandImage {
-	display:block; width:100%; height:0; margin:0 auto; padding:54.68% 0 0 0; overflow:hidden;
-	background:url(../img/brand-img.png) center top no-repeat; background-size:contain; }
+/* title */
+.brandTitle { 
+	width:185px; height:45px; 
+	background-image:url(../img/brand-title.png); }
 
+/* title extend */
+.brandTitleSplash { 
+	width:240px; height:200px; 
+	background-image:url(../img/brand-title-splash.png); }
 
-/* ==========================================================================
-   structure - MENU
-   ========================================================================== */
-
-/* -------------------------------------------------------------------------- */
-/* container */
-.menu {
-	position:absolute; bottom:0; left:0; width:100%; height:290px; margin:0; padding:0; overflow:hidden;
-	/*transition*/
-	/*-webkit-transform:translate3d(0,0,0);*/
-	-webkit-transition:-webkit-transform 0.3s ease-in-out;
-	-moz-transition:-moz-transform 0.3s ease-in-out;
-	-o-transition:-o-transform 0.3s ease-in-out;
-	transition:transform 0.3s ease-in-out; }
-
-	/* -------------------------------------------------------------------------- */
-	/* title */
-	.menu .title {
-		position:relative; width:auto; height:auto; margin:0; padding:0; overflow:hidden;
-		/*background-gradient*/
-		background-color:#333;
-		background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.05)), color-stop(100%,rgba(255,255,255,0)));
-		background-image:-webkit-linear-gradient(top, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 100%);
-		background-image:-moz-linear-gradient(top, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 100%);
-		background-image:-o-linear-gradient(top, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 100%);
-		background-image:linear-gradient(to bottom, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 100%); }
-
-		/* label */
-		.menu .title .label {
-			display:block; width:auto; height:auto; margin:15px; padding:0; overflow:hidden;
-			color:#fff; text-shadow:0 1px 0 rgba(0,0,0,0.5); white-space:nowrap; text-overflow:ellipsis;
-			font-family:'SourceSansPro',sans-serif; font-size:20px; font-weight:600; line-height:20px; }
-
-		/* btnMenu */
-		.menu .title .btnMenu {
-			display:block; position:absolute; top:15px; right:15px; width:21px; height:21px; margin:0; padding:0; overflow:hidden;
-			color:#aaa; font-size:21px; line-height:21px;
-			text-decoration:none }
-		.menu .title .btnMenu.active { color:#fff; }
-
-	/* -------------------------------------------------------------------------- */
-	/* menuItems */
-	.menu .menuItems {
-		display:table; /* remove inline-block gaps */ position:relative; width:100%; }
-
-		/* menuItem */
-		.menu .menuItem {
-			display:inline-block; position:relative; width:33.33%; height:80px; margin:0; padding:0; overflow:hidden;
-			color:#666; border-top:1px solid #f2f2f2; border-bottom:1px solid #c4c4c4; border-left:1px solid #c4c4c4;
-			/*box-sizing*/-webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box;
-			/*background-gradient*/
-			background-color:#ebebeb;
-			background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.05)));
-			background-image:-webkit-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.05) 100%);
-			background-image:-moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.05) 100%);
-			background-image:-o-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.05) 100%);
-			background-image:linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.05) 100%); }
-		.menu .menuItem:nth-child(3n+1) { border-left:none; }
-
-			/* icon */
-			.menu .menuItems .icon {
-				position:static; width:35px; height:35px; margin:15px auto 0 auto; overflow:hidden;
-				font-size:35px; line-height:1em; text-align:center; }
-
-			/* bubble */
-			.menu .menuItems .bubble {
-				top:10px; left:50%; margin:0 0 0 10px;  }
-
-			/* label */
-			.menu .menuItems .label {
-				display:block; width:auto; height:auto; margin:9px; padding:0; overflow:hidden;
-				font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; line-height:1em; text-align:center; }
-
-		/* interaction */
-		.menu .menuItem.active {
-			background-color:#fff; background-image:none; }
-
-/* -------------------------------------------------------------------------- */
-/* default state */
-
-/* position */
-.menu {
-	/*transform*/
-	-webkit-transform:translate(0,80px);
-	-moz-transform:translate(0,80px);
-	-ms-transform:translate(0,80px);
-	-o-transform:translate(0,80px);
-	transform:translate(0,80px); }
-
-/* btnMenu */
-.menu .title .btnMenu .icon { display:none; top:0; left:0; width:100%; height:100%; }
-.menu .title .btnMenu .fwicon-grid-all { display:block; }
-
-/* -------------------------------------------------------------------------- */
-/* active state */
-
-/* position */
-.menu.active {
-	/*transform*/
-	-webkit-transform:translate(0,0);
-	-moz-transform:translate(0,0);
-	-ms-transform:translate(0,0);
-	-o-transform:translate(0,0);
-	transform:translate(0,0); }
-
-/* btnMenu */
-.menu.active .title .btnMenu .fwicon-grid { display:block; }
-.menu.active .title .btnMenu .fwicon-grid-all { display:none; }
-
-
-/* ==========================================================================
-   structure - MENULIST
-   ========================================================================== */
-
-/* -------------------------------------------------------------------------- */
-/* container */
-.menuList {
-	position:absolute; top:123px; left:0; bottom:0; width:100%; height:auto; margin:0; padding:0; overflow:hidden; }
-
-	/* -------------------------------------------------------------------------- */
-	/* title */
-	.menuList .title {
-		position:relative; width:auto; height:auto; margin:0; padding:0; overflow:hidden;
-		background:#333; }
-
-		/* label */
-		.menuList .title .label {
-			display:block; width:auto; height:auto; margin:15px; padding:0; overflow:hidden;
-			color:#fff; text-shadow:0 1px 0 rgba(0,0,0,0.5); white-space:nowrap; text-overflow:ellipsis;
-			font-family:'SourceSansPro',sans-serif; font-size:20px; font-weight:600; line-height:20px; }
-
-	/* -------------------------------------------------------------------------- */
-	/* scroller */
-	.menuList > .scroller {
-		position:absolute; top:50px; left:0; bottom:0px; width:100%; }
-
-	/* -------------------------------------------------------------------------- */
-	/* menuItems */
-	.menuList .menuItems {
-		display:block; position:relative; width:100%; height:auto; margin:0; padding:0; overflow:hidden;
-		border-bottom:1px solid #333; }
-
-		/* menuItem */
-		.menuList .menuItem {
-			display:block; position:relative; width:100%; height:42px; margin:0; padding:0 15px; overflow:hidden;
-			color:#777; background:transparent; border-top:1px solid #333; border-bottom:1px solid rgba(0,0,0,0.5);
-			/*box-sizing*/-webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; }
-
-			/* icon */
-			.menuList .menuItems .icon {
-				position:static; width:24px; height:42px; padding:0; vertical-align:middle;
-				font-size:24px; line-height:40px; text-align:center; }
-
-			/* bubble */
-			.menuList .menuItems .bubble {
-				top:50%; right:15px; margin:-10px 0 0 0;  }
-
-			/* label */
-			.menuList .menuItems .label {
-				display:inline-block; width:auto; height:auto; margin:0 15px; padding:0; overflow:hidden;
-				white-space:nowrap; text-overflow:ellipsis; vertical-align:middle;
-				font-family:'Montserrat',sans-serif; font-size:11px; font-weight:700; line-height:42px; text-align:center; }
-
-		/* interaction */
-		.menuList .menuItem.active { background:#ffc423; border-color:#ffc423; }
-		.menuList .menuItem.active .icon,
-		.menuList .menuItem.active .label { color:#fff; }
-		.menuList .menuItem.active .icon { text-shadow:0px 0px 5px rgba(255,255,255,1); }
-		.menuList .menuItem.active .label { text-shadow:0px 1px 0px rgba(0,0,0,0.1); }
+/* redemp */
+.brandRedemp {
+	width:125px; height:85px; 
+	background-image:url(../img/brand-redemp.png); }
 
 
 /* ==========================================================================
@@ -502,7 +287,7 @@ body.menuActive #pgMenu .pageShadow { display:block; }
 
 /* default */
 #loader {
-	position:absolute; top:50%; left:50%; width:35px; height:35px; margin:-25px 0 0 -25px; padding:8px; overflow:hidden; z-index:10000;
+	display:none; position:absolute; top:50%; left:50%; width:35px; height:35px; margin:-25px 0 0 -25px; padding:8px; overflow:hidden; z-index:10000;
 	background:rgba(0,0,0,0) url(../img/loader.png) center center no-repeat; background-size:35px 35px;
 	/*border-radius*/-webkit-border-radius:50%; border-radius:50%;
 	/*background-clip*/-moz-background-clip:padding; -webkit-background-clip:padding-box; background-clip:padding-box; }
@@ -532,40 +317,6 @@ body.menuActive #pgMenu .pageShadow { display:block; }
 		color:#333; font-family:'SourceSansPro',sans-serif; font-weight:400; line-height:1em; text-align:center; text-transform:uppercase; }
 	.dateBlock .d { margin:8px 0 0 0; font-size:30px; }
 	.dateBlock .m { margin:-4px 0 0 0; font-size:9px; }
-
-
-/* ==========================================================================
-   common - SYSMSG
-   ========================================================================== */
-
-/* -------------------------------------------------------------------------- */
-/* container */
-.sysmsg {
-	position:relative; width:auto; height:auto; margin:0; padding:20px; overflow:hidden;
-	color:#fff; text-align:center;background:#666;
-	font-family:'Montserrat',sans-serif; font-size:22px; font-weight:700; line-height:25px; font-style:italic; }
-
-	/* common */
-	.sysmsg h3,
-	.sysmsg p,
-	.sysmsg li { margin:0 0 10px 0; }
-	.sysmsg > :last-child { margin-bottom:0; }
-
-	/* custom */
-	.sysmsg h3 	{ font-size:30px; line-height:30px; }
-	.sysmsg p 	{ font-size:22px; line-height:25px; }
-	.sysmsg a	{ text-decoration:underline; }
-
-	/* icon */
-	.sysmsg .icon {
-		position:static; display:inline-block; padding:0 0.5em;
-		font-size:22px; line-height:25px; vertical-align:bottom; }
-	.sysmsg .iconLeft 	{ padding-left:0; }
-	.sysmsg .iconRight 	{ padding-right:0; }
-
-/* extend */
-.sysmsgSuccess 	{ background:#a2d04b; }
-.sysmsgError 	{ background:#f0176a; }
 
 
 /* ==========================================================================
@@ -865,30 +616,9 @@ section,
 	position:relative; width:auto; height:auto; margin:0; padding:0; overflow:hidden;
 	color:#fff; text-shadow:0 1px 0 rgba(0,0,0,0.5); }
 
-	/* icon */
-	[data-role="title"] > .icon {
-		top:0; right:0; width:50px; overflow:hidden; }
-
-	/* label */
-	[data-role="title"] > .label {
-		display:block; width:auto; height:auto; margin:0 50px 0 20px; padding:0; overflow:hidden;
-		color:#fff;  white-space:nowrap; text-overflow:ellipsis;
-		font-family:'Montserrat',sans-serif; font-weight:700; }
-	[data-role="title"] > .icon + .label {
-		margin-right:20px; }
-
-/* -------------------------------------------------------------------------- */
-/* extend */
-h2[data-role="title"] { background:#333; }
-h2[data-role="title"] > .label { font-size:18px; line-height:50px; }
-h2[data-role="title"] > .icon { height:50px; font-size:18px; line-height:50px; }
-h3[data-role="title"] { background:#444; }
-h3[data-role="title"] > .label { font-size:15px; line-height:35px; }
-h3[data-role="title"] > .icon { height:35px; font-size:15px; line-height:35px; }
-
 
 /* ==========================================================================
-   common - ICONS
+   common - BUTTONS
    ========================================================================== */
 
 /* -------------------------------------------------------------------------- */
@@ -965,19 +695,7 @@ h3[data-role="title"] > .icon { height:35px; font-size:15px; line-height:35px; }
    ========================================================================== */
 
 .bgPattern {
-	background:url(../img/body-tile.png) 0 0 repeat; background-size:4px; }
-
-.bgSolidLite {
-	background:#ededed; }
-
-.bgGradientLite {
-	/*background-gradient*/
-	background-color:#fff;
-	background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.1)));
-	background-image:-webkit-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 100%);
-	background-image:-moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 100%);
-	background-image:-o-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 100%);
-	background-image:linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 100%); }
+	background:url(../img/bg-pattern.png) 0 0 repeat; background-size:147px; }
 
 .bgShade {
 	display:block; position:absolute; margin:0; padding:0; overflow:hidden;
@@ -1031,67 +749,9 @@ h3[data-role="title"] > .icon { height:35px; font-size:15px; line-height:35px; }
    page - SPLASH
    ========================================================================== */
 
-/* brand */
-#pgSplash .pageContent .brandTitle { margin-top:130px; }
-
-
-/* ==========================================================================
-   page - HOME
-   ========================================================================== */
-
-/* brand */
-#pgHome .pageContent .brandTitle { margin-top:35px; }
-#pgHome .pageContent .brandImage { margin-top:15px; }
-
-
-/* ==========================================================================
-   page - MENU
-   ========================================================================== */
-
-/* pageBg */
-#pgMenu .pageBg { background-position:0 -360px; }
-#pgMenu .pageBg .bgPattern { position:absolute; top:123px;/*brandTitle height*/ left:0; bottom:0; width:100%; height:auto; margin:0; padding:0; overflow:hidden; }
-
-/* brand */
-#pgMenu .pageContent .brandTitle { margin:35px auto; width:195px; height:53px; }
-#pgMenu .pageContent .brandImage { display:none; }
-
-
-/* ==========================================================================
-   page - ARTICLE
-   ========================================================================== */
-
-/* news */
-#pgArticle[data-content-type="news"] > .pageHeader .headerTitle:before { content:'News'; }
-#pgArticle[data-content-type="news"] > .pageTitle,
-#pgArticle[data-content-type="news"] > .pageContent .dateBlock { display:none!important; }
-#pgArticle[data-content-type="news"] > .pageContent { top:50px; }
-
-/* events */
-#pgArticle[data-content-type="events"] > .pageHeader .headerTitle:before { content:'Events'; }
-#pgArticle[data-content-type="events"] > .pageContent .contentView > .date { display:none!important; }
-
-
-/* ==========================================================================
-   page - GALLERY
-   ========================================================================== */
-
-/* content */
-#pgGallery .pageContent { border-top:4px solid #000; }
-
-
-/* ==========================================================================
-   page - CONTACT
-   ========================================================================== */
-
-/* contactList */
-#contactList { width:100%; height:240px; }
-#contactList .btnCap { width:80%; }
-#contactList .btnCap:first-child { margin-top:25px; }
-
-/* contactInfo */
-#contactInfo { position:absolute; top:240px; left:0; bottom:0; width:100%; height:auto; overflow:hidden; }
-#contactInfo > .title + .scroller { position:absolute; top:35px; left:0; bottom:0; overflow:hidden; }
+/* brands */
+#pgSplash .brandTitleSplash { margin-top:60px; }
+#pgSplash .brandRedemp { position:absolute; bottom:40px; left:50%; margin:0 0 0 -62px; }
 
 
 /* ==========================================================================
