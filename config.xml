@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <widget xmlns     	= "http://www.w3.org/ns/widgets"
         xmlns:gap 	= "http://phonegap.com/ns/1.0"
-        id        	= "com.fraynework.VCSMS"
+        id        	= "com.fraynework.bread4today"
         versionCode = "1"
-		version   	= "0.1.0">
+		version   	= "1.0.0">
 	<!-- versionCode is optional and Android only -->
 	
     <!-- The name of the application -->
-	<name>VCSMS</name>
+	<name>Bread 4 Today</name>
 	<!-- A description for your application -->
     <description>
-        Victoria Catholic School Mobile Services
+        Redemptorists Daily Reflection Mobile App
     </description>
 	<!-- Author -->
     <author href="http://www.fraynework.com.au" email="contact@fraynework.com.au">
@@ -22,17 +22,10 @@
 		more info on https://build.phonegap.com/docs/config-xml
 	-->
     <feature name="http://api.phonegap.com/1.0/device" />
-	<feature name="http://api.phonegap.com/1.0/contacts" />
-	<feature name="http://api.phonegap.com/1.0/file"/>
-	<feature name="http://api.phonegap.com/1.0/geolocation" />
-	<feature name="http://api.phonegap.com/1.0/battery"/>
-	<feature name="http://api.phonegap.com/1.0/camera"/>
-	<feature name="http://api.phonegap.com/1.0/media"/>
 	<feature name="http://api.phonegap.com/1.0/network"/>
 	<feature name="http://api.phonegap.com/1.0/notification"/>
 	
 	<!-- Plugins -->
-	<gap:plugin name="GenericPush" /><!-- latest release -->
 	
 	<!-- Perfs: multi-platform -->
     <preference name="phonegap-version" value="2.5.0" />
