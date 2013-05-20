@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<title>Redemptorists Daily Reflection Mobile App</title>
+<!-- CSS:VENDOR -->
+<!-- <link rel="stylesheet" href="lib/jqm/jquery.mobile-1.2.0.min.css"> -->
+<!-- CSS:FONT -->
+<link rel="stylesheet" href="lib/font/montserrat-webfont/font.css">
+<link rel="stylesheet" href="lib/font/crimson-text-webfont/font.css">
+<!-- CSS:ICON -->
+<link rel="stylesheet" href="lib/icon/fontawesome/icon.css">
+<link rel="stylesheet" href="lib/icon/fwicon/icon.css">
+<!-- CSS:LIB -->
+<link rel="stylesheet" href="lib/css/normalize.css">
+<link rel="stylesheet" href="lib/css/animate.css">
+<!-- CSS:APP -->
+<link rel="stylesheet" href="lib/css/app.css">
+<!-- CSS:CUSTOM -->
+<style>
+</style>
+<!-- JS:PHONEGAP -->
+<script src="phonegap.js"></script>
+<!-- JS:VENDOR -->
+<script src="lib/js/zepto-1.0.all.min.js"></script>
+<!--
+<script src="lib/js/jquery-1.8.2.min.js"></script>
+<script src="lib/js/jqm.mobileinit.js"></script>
+<script src="lib/jqm/jquery.mobile-1.2.0.min.js"></script>
+-->
+<!-- JS:LIB -->
+<script src="lib/js/fastclick.js"></script>
+<script src="lib/js/ftscroller.js"></script>
+</head>
+<body class="bgPattern">
+
+<!-- PAGE: BROWSE -->
+<div id="pgBrowse" class="page bgDark" data-role="page">
+	<div class="pageContent" data-role="content">
+		<div class="scroller" data-role="scroller">
+			<div id="categoryList" class="list" data-role="list">
+				<a href="list.html" class="item itemCategory" data-role="button">
+					<img class="imgPoster" src="lib/img/img-cate-justice.jpg" alt="">
+					<div class="content">
+						<div class="bgStitch"></div>
+						<p class="title">Justice</p>
+					</div>
+				</a>
+				<a href="list.html" class="item itemCategory" data-role="button">
+					<img class="imgPoster" src="lib/img/img-cate-peace.jpg" alt="">
+					<div class="content">
+						<div class="bgStitch"></div>
+						<p class="title">Peace</p>
+					</div>
+				</a>
+				<a href="list.html" class="item itemCategory" data-role="button">
+					<img class="imgPoster" src="lib/img/img-cate-family.jpg" alt="">
+					<div class="content">
+						<div class="bgStitch"></div>
+						<p class="title">Family</p>
+					</div>
+				</a>
+				<a href="list.html" class="item itemCategory" data-role="button">
+					<img class="imgPoster" src="lib/img/img-cate-inclusion.jpg" alt="">
+					<div class="content">
+						<div class="bgStitch"></div>
+						<p class="title">Inclusion</p>
+					</div>
+				</a>
+				<a href="list.html" class="item itemCategory" data-role="button">
+					<img class="imgPoster" src="lib/img/img-cate-faith.jpg" alt="">
+					<div class="content">
+						<div class="bgStitch"></div>
+						<p class="title">Faith</p>
+					</div>
+				</a>
+				<a href="list.html" class="item itemCategory" data-role="button">
+					<img class="imgPoster" src="lib/img/img-cate-hope.jpg" alt="">
+					<div class="content">
+						<div class="bgStitch"></div>
+						<p class="title">Hope</p>
+					</div>
+				</a>
+				<a href="list.html" class="item itemCategory" data-role="button">
+					<img class="imgPoster" src="lib/img/img-cate-darkness.jpg" alt="">
+					<div class="content">
+						<div class="bgStitch"></div>
+						<p class="title">Darkness</p>
+					</div>
+				</a>
+				<a href="list.html" class="item itemCategory" data-role="button">
+					<img class="imgPoster" src="lib/img/img-cate-forgiveness.jpg" alt="">
+					<div class="content">
+						<div class="bgStitch"></div>
+						<p class="title">Forgiveness</p>
+					</div>
+				</a>
+				<a href="list.html" class="item itemCategory" data-role="button">
+					<img class="imgPoster" src="lib/img/img-cate-strength.jpg" alt="">
+					<div class="content">
+						<div class="bgStitch"></div>
+						<p class="title">Strength</p>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+</div><!-- /PAGE: BROWSE -->
+
+<!-- BRAND -->
+<div id="appBrand" data-role="brand">
+	<h1 class="ir brand brandTitle">Bread 4 Today</h1>
+</div><!-- /BRAND -->
+
+<!-- FOOTER -->
+<div id="appFooter" data-role="footer">
+	<nav data-role="nav">	
+		<a href="browse.html" id="navBrowse" class="navItem current" data-role="button" data-target="Browse"><span class="ir bgCurrent"></span><i class="icon fwicon-notepad"></i><span class="label">Browse</span></a>
+		<a href="article.html" id="navArticle" class="navItem" data-role="button" data-target="Article"><span class="ir bgCurrent"></span><i class="icon fwicon-wheat"></i></a>
+		<a href="more.html" id="navMore" class="navItem" data-role="button" data-target="More"><span class="ir bgCurrent"></span><i class="icon fwicon-more"></i><span class="label">More</span></a>
+	</nav>
+</div><!-- /FOOTER -->
+
+<!-- JS:APP -->
+<script src="lib/js/app-utils.js"></script>
+<script src="lib/js/app-data.js"></script>
+<script src="lib/js/app-view.js"></script>
+<script src="lib/js/app.js"></script>
+<script src="lib/js/app-demo.js"></script>
+<!-- JS:CUSTOM -->
+<script>
+$(document).ready(function(){
+	App.view.initScroller('Browse');
+});
+</script>
+</body>
+</html>
