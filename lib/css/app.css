@@ -166,10 +166,10 @@ body {
 	-o-transition:-o-transform 0.3s ease-in-out;
 	transition:transform 0.3s ease-in-out; }
 
-/* pageBg */
-.pageBg {
-	top:0; height:100%;
-	background:#ffc423 url(../img/brand-bg.jpg) center top no-repeat; background-size:cover; }
+	/* pageBg */
+	.pageBg {
+		top:0; height:100%;
+		background:#ffc423 url(../img/brand-bg.jpg) center top no-repeat; background-size:cover; }
 
 
 /* ==========================================================================
@@ -696,6 +696,9 @@ section,
 /* ==========================================================================
    page - SPLASH
    ========================================================================== */
+
+/* page */
+#pgSplash.page { top:0; bottom:0; }
 
 /* brands */
 #pgSplash .brandTitleSplash { margin-top:60px; }
